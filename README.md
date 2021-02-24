@@ -34,6 +34,7 @@ yarn dev
 ```
 
 Run this on of the commands in your bash.
-It installs all your node modules, sets up the local docker mysql instance and starts the app.
+It installs all your node modules, sets up the local docker mysql container and starts the app.
+I also added a debug config for vscode on port 9229, so it is easier do develop custom functionality.
 
 Your app should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
