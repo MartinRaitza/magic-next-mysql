@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import Container from '@/components/container'
-import ButtonLink from '@/components/button-link'
+import Link from 'next/link';
+import Container from '@/components/container';
+import ButtonLink from '@/components/button-link';
 
 export default function Nav({ title = 'Entries' }) {
   return (
@@ -11,8 +11,9 @@ export default function Nav({ title = 'Entries' }) {
             <a className="font-bold text-3xl">{title}</a>
           </Link>
           <ButtonLink href="/new">New Entry</ButtonLink>
+          <ButtonLink href="/migration">Migrate DB</ButtonLink>
         </div>
       </nav>
     </Container>
-  )
+  );
 }
