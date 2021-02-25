@@ -1,13 +1,13 @@
-import '../styles/index.css'
-import Footer from '@/components/footer'
+import { Provider } from 'react-redux';
+import { useStore } from '../stores/Root';
+import '../styles/index.css';
 
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
+  const store = useStore(pageProps.initialReduxState);
+
   return (
-    <>
+    <Provider store={store}>
       <Component {...pageProps} />
-      <Footer />
-    </>
-  )
+    </Provider>
+  );
 }
-
-export default MyApp
