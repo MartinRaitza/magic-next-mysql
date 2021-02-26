@@ -1,13 +1,14 @@
-import Skeleton from 'react-loading-skeleton'
+import Skeleton from 'react-loading-skeleton';
 
-import Nav from '@/components/nav'
-import Container from '@/components/container'
-import Entries from '@/components/entries'
+import Nav from '@/components/nav';
+import Container from '@/components/container';
+import Sets from '@/components/sets';
+import Footer from '@/components/footer';
 
-import { useEntries } from '@/lib/swr-hooks'
+import { useSets } from '@/lib/swr-hooks';
 
 export default function IndexPage() {
-  const { entries, isLoading } = useEntries()
+  const { sets, isLoading } = useSets();
 
   if (isLoading) {
     return (
@@ -24,15 +25,16 @@ export default function IndexPage() {
           <Skeleton height={48} />
         </Container>
       </div>
-    )
+    );
   }
 
   return (
     <div>
       <Nav />
       <Container>
-        <Entries entries={entries} />
+        <Sets sets={sets} />
+        <Footer />
       </Container>
     </div>
-  )
+  );
 }

@@ -1,7 +1,9 @@
+import ButtonLink from '@/components/button-link';
+
 function Footer() {
   return (
-    <footer className="container mx-auto fixed bottom-0 right-0 left-0 flex justify-center items-center h-24">
-      Footer
+    <footer className="container mx-auto flex justify-center items-center h-24">
+      <ButtonLink href="/migration">Migrate DB</ButtonLink>
     </footer>
   );
 }
