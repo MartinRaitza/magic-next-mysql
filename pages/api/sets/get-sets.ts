@@ -5,7 +5,7 @@ const handler: NextApiHandler = async (_, res) => {
   try {
     const results = await query(`
       SELECT * FROM sets
-      ORDER BY id DESC
+      ORDER BY released_at DESC
       LIMIT 10
   `);
 

@@ -15,6 +15,7 @@ function Sets({ sets }) {
               name={set.name}
               cardCount={set.card_count}
               releaseDate={set.released_at}
+              setType={set.set_type}
             />
           </div>
         ))}
