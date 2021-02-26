@@ -7,7 +7,9 @@ export default function App({ Component, pageProps }) {
 
   return (
     <Provider store={store}>
-      <Component {...pageProps} />
+      <div className="bg-gray-300">
+        <Component {...pageProps} />
+      </div>
     </Provider>
   );
 }
