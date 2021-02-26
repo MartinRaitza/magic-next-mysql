@@ -1,5 +1,6 @@
+DROP TABLE IF EXISTS `sets`;
 CREATE TABLE IF NOT EXISTS `sets` (
-  id INT AUTO_INCREMENT PRIMARY KEY,
+  id VARCHAR(50) PRIMARY KEY,
   code TEXT,
   name TEXT,
   card_count INT,
@@ -10,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `sets` (
     NOT NULL 
     DEFAULT CURRENT_TIMESTAMP 
     ON UPDATE CURRENT_TIMESTAMP
-)
+);
 
 -- {
 --   "object":"set",

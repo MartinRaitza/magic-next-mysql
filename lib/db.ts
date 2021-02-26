@@ -7,6 +7,7 @@ export const mysqlConnection: ServerlessMysql = mysql({
     user: process.env.MYSQL_USERNAME,
     password: process.env.MYSQL_PASSWORD,
     port: parseInt(process.env.MYSQL_PORT),
+    multipleStatements: true,
   },
 });
 
