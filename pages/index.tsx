@@ -29,7 +29,7 @@ export default function IndexPage() {
   }
 
   return (
-    <div>
+    <div className="bg-gray-300">
       <Nav />
       <Container>
         <Sets sets={sets} />
