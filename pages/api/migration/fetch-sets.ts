@@ -14,10 +14,17 @@ const handler: NextApiHandler = async (_, res) => {
       if (obj.object === 'set') {
         query(
           `
-          INSERT IGNORE INTO  sets (id, code, name, card_count, icon_svg_uri)
-          VALUES (?, ?, ?, ?, ?)
+          INSERT IGNORE INTO  sets (id, code, name, card_count, released_at, icon_svg_uri)
+          VALUES (?, ?, ?, ?, ?, ?)
           `,
-          [obj.id, obj.code, obj.name, obj.card_count, obj.icon_svg_uri],
+          [
+            obj.id,
+            obj.code,
+            obj.name,
+            obj.card_count,
+            obj.released_at,
+            obj.icon_svg_uri,
+          ],
         );
       }
     });

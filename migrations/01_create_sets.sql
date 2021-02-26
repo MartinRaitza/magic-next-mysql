@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS `sets` (
   name TEXT,
   card_count INT,
   icon_svg_uri TEXT,
+  released_at DATE,
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   updated_at 
     TIMESTAMP 
